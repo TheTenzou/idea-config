@@ -1,0 +1,23 @@
+<templateSet group="user">
+  <template name="Test" value="@Test&#10;fun `should $DESCRIPTION$`() {&#10;    //given&#10;    $GIVEN$&#10;    &#10;    // when&#10;    $WHEN$&#10;    &#10;    // then&#10;    $THEN$&#10; }&#10;    " description="Test function, JUnit5" toReformat="false" toShortenFQNames="true">
+    <variable name="DESCRIPTION" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="GIVEN" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="WHEN" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="THEN" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="KOTLIN_CLASS" value="true" />
+    </context>
+  </template>
+  <template name="Nested" value="@Nested&#10;@DisplayName(&quot;$DISPLAY_NAME$&quot;)&#10;@TestInstance(TestInstance.Lifecycle.PER_CLASS)&#10;inner class $CLASS_NAME$ {&#10;    &#10;    $BODY$&#10;}" description="Nested test class, JUnit5" toReformat="false" toShortenFQNames="true">
+    <variable name="DISPLAY_NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="CLASS_NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="BODY" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="KOTLIN" value="true" />
+      <option name="KOTLIN_COMMENT" value="false" />
+      <option name="KOTLIN_EXPRESSION" value="false" />
+      <option name="KOTLIN_STATEMENT" value="false" />
+      <option name="KOTLIN_TOPLEVEL" value="false" />
+    </context>
+  </template>
+</templateSet>
